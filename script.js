@@ -19,11 +19,15 @@ button.addEventListener("click",async function(){
     // console.log(repoData);
     repoList.innerHTML = "";
 
-    repoData.forEach(function(repo){
-        const repoItem = document.createElement("p");
-        repoItem.textContent = repo.name;
-        repoList.appendChild(repoItem);
-    })
+   repoData.forEach(function(repo){
+    const repoItem = document.createElement("a");
+    repoItem.textContent = repo.name;
+    repoItem.href = repo.html_url;
+    repoItem.target = "_blank";
+    repoItem.classList.add("block");
+
+    repoList.appendChild(repoItem);
+});
 
     followers.textContent = data.followers;
     following.textContent = data.following;
