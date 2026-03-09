@@ -7,10 +7,16 @@ const repos = document.getElementById("repos");
 
 const userStats = document.getElementById("userStats");
 
+const repoList = document.getElementById("repoList");
+
 button.addEventListener("click",async function(){
     const username = input.value;
     const response = await fetch(`https://api.github.com/users/${username}`);
     const data = await response.json();
+
+    const repoResponse = await fetch(`https://api.github.com/users/${username}/repos`);
+    const repoData = await repoResponse.json();
+    console.log(repoData);
 
     followers.textContent = data.followers;
     following.textContent = data.following;
@@ -19,3 +25,4 @@ button.addEventListener("click",async function(){
     userStats.classList.remove("hidden");
 
 })
+
