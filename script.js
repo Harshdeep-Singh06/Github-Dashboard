@@ -6,3 +6,7 @@ const following = document.getElementById("following");
 const repos = document.getElementById("repos");
 
 const userStats = document.getElementById("userStats");
+
+button.addEventListener("click",function(){
+    const username = input.value;
+})
