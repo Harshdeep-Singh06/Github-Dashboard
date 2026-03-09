@@ -16,13 +16,21 @@ button.addEventListener("click",async function(){
 
     const repoResponse = await fetch(`https://api.github.com/users/${username}/repos`);
     const repoData = await repoResponse.json();
-    console.log(repoData);
+    // console.log(repoData);
+    repoList.innerHTML = "";
+
+    repoData.forEach(function(repo){
+        const repoItem = document.createElement("p");
+        repoItem.textContent = repo.name;
+        repoList.appendChild(repoItem);
+    })
 
     followers.textContent = data.followers;
     following.textContent = data.following;
     repos.textContent = data.public_repos;
 
     userStats.classList.remove("hidden");
+    repoList.classList.remove("hidden");
 
 })
 
