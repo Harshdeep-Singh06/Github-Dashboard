@@ -9,4 +9,5 @@ const userStats = document.getElementById("userStats");
 
 button.addEventListener("click",function(){
     const username = input.value;
+    fetch(`https://api.github.com/users/${username}`);
 })
