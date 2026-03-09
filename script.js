@@ -24,7 +24,7 @@ button.addEventListener("click",async function(){
     repoItem.textContent = repo.name;
     repoItem.href = repo.html_url;
     repoItem.target = "_blank";
-    repoItem.classList.add("block");
+    repoItem.classList.add("block","mb-2","w-fit");
 
     repoList.appendChild(repoItem);
 });
