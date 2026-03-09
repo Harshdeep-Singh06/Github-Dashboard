@@ -7,7 +7,9 @@ const repos = document.getElementById("repos");
 
 const userStats = document.getElementById("userStats");
 
-button.addEventListener("click",function(){
+button.addEventListener("click",async function(){
     const username = input.value;
-    fetch(`https://api.github.com/users/${username}`);
+    const response = fetch(`https://api.github.com/users/${username}`);
+    const data = await response.json();
+
 })
