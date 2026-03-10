@@ -9,6 +9,8 @@ const userStats = document.getElementById("userStats");
 
 const repoList = document.getElementById("repoList");
 
+const repoHeading = document.getElementById("repoHeading");
+
 button.addEventListener("click",async function(){
     const username = input.value;
     const response = await fetch(`https://api.github.com/users/${username}`);
@@ -27,7 +29,7 @@ button.addEventListener("click",async function(){
         repoCard.target = "_blank";
 
             repoCard.classList.add(
-                 "bg-sky-700",
+                 "bg-sky-500",
                  "text-white",
                  "w-60",
                  "p-4",
@@ -47,6 +49,7 @@ button.addEventListener("click",async function(){
 
     userStats.classList.remove("hidden");
     repoList.classList.remove("hidden");
+    repoHeading.classList.remove("hidden");
 
 })
 
