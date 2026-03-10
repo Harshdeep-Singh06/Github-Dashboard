@@ -6,6 +6,7 @@ const repos = document.getElementById("repos");
 const userStats = document.getElementById("userStats");
 const repoList = document.getElementById("repoList");
 const repoHeading = document.getElementById("repoHeading");
+const makeRepo = document.getElementById("makeRepo");
 const tokenInput = document.getElementById("tokenInput");
 const repoNameInput = document.getElementById("repoNameInput");
 const createRepoBtn = document.getElementById("createRepoBtn");
@@ -51,6 +52,7 @@ button.addEventListener("click",async function(){
     userStats.classList.remove("hidden");
     repoList.classList.remove("hidden");
     repoHeading.classList.remove("hidden");
+    makeRepo.classList.remove("hidden");
 
 })
 
