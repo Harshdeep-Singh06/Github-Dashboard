@@ -32,7 +32,7 @@ button.addEventListener("click",async function(){
                  "bg-sky-500",
                  "text-white",
                  "px-6",
-                 "p-4",
+                 "py-4",
                  "rounded-2xl",
                  "shadow-lg",
                  "cursor-pointer",
