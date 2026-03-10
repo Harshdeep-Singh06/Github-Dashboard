@@ -1,15 +1,15 @@
 const input  = document.querySelector("input");
 const button = document.querySelector("button");
-
 const followers = document.getElementById("followers");
 const following = document.getElementById("following");
 const repos = document.getElementById("repos");
-
 const userStats = document.getElementById("userStats");
-
 const repoList = document.getElementById("repoList");
-
 const repoHeading = document.getElementById("repoHeading");
+const tokenInput = document.getElementById("tokenInput");
+const repoNameInput = document.getElementById("repoNameInput");
+const createRepoBtn = document.getElementById("createRepoBtn");
+
 
 button.addEventListener("click",async function(){
     const username = input.value;
