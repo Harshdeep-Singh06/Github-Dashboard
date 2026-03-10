@@ -11,6 +11,7 @@ const tokenInput = document.getElementById("tokenInput");
 const repoNameInput = document.getElementById("repoNameInput");
 const createRepoBtn = document.getElementById("createRepoBtn");
 const aboutSec = document.getElementById("aboutSec");
+const repoMsg = document.getElementById("repoMsg");
  
 button.addEventListener("click",async function(){
     const username = input.value;
@@ -60,4 +61,9 @@ button.addEventListener("click",async function(){
 createRepoBtn.addEventListener('click',async function() {
     const token =  tokenInput.value;
     const repoName = repoNameInput.value;
+
+    if(token === "" || repoName === ""){
+        alert("Enter Token and Repository name");
+        return;
+    }
 })
