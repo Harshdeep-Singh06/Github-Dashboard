@@ -25,16 +25,17 @@ button.addEventListener("click",async function(){
 
         const repoCard = document.createElement("a");
 
-        repoCard.hred = repo.html_url;
+        repoCard.href = repo.html_url;
         repoCard.target = "_blank";
 
             repoCard.classList.add(
                  "bg-sky-500",
                  "text-white",
-                 "w-60",
+                 "px-6",
                  "p-4",
                  "rounded-2xl",
                  "shadow-lg",
+                 "cursor-pointer",
                  "text-center",
                  "hover:scale-105",
                  "transition"
