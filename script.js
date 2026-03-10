@@ -10,8 +10,8 @@ const makeRepo = document.getElementById("makeRepo");
 const tokenInput = document.getElementById("tokenInput");
 const repoNameInput = document.getElementById("repoNameInput");
 const createRepoBtn = document.getElementById("createRepoBtn");
-
-
+const aboutSec = document.getElementById("aboutSec");
+ 
 button.addEventListener("click",async function(){
     const username = input.value;
     const response = await fetch(`https://api.github.com/users/${username}`);
@@ -53,6 +53,7 @@ button.addEventListener("click",async function(){
     repoList.classList.remove("hidden");
     repoHeading.classList.remove("hidden");
     makeRepo.classList.remove("hidden");
+    aboutSec.classList.add("hidden")
 
 })
 
