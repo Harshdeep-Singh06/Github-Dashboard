@@ -19,15 +19,26 @@ button.addEventListener("click",async function(){
     // console.log(repoData);
     repoList.innerHTML = "";
 
-   repoData.forEach(function(repo){
-    const repoItem = document.createElement("a");
-    repoItem.textContent = repo.name;
-    repoItem.href = repo.html_url;
-    repoItem.target = "_blank";
-    repoItem.classList.add("block","mb-2","w-fit");
+    repoData.forEach(function(repo){
 
-    repoList.appendChild(repoItem);
-});
+        const repoCard = document.createElement("a");
+
+        repoCard.hred = repo.html_url;
+        repoCard.target = "_blank";
+
+            repoCard.classList.add(
+                 "bg-white",
+                 "w-60",
+                 "p-4",
+                 "rounded-2xl",
+                 "shadow-lg",
+                 "text-center",
+                 "hover:scale-105",
+                 "transition"
+            );
+        repoCard.textContent = repo.name;
+        repoList.appendChild(repoCard)
+    });
 
     followers.textContent = data.followers;
     following.textContent = data.following;
