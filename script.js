@@ -57,3 +57,7 @@ button.addEventListener("click",async function(){
 
 })
 
+createRepoBtn.addEventListener('click',async function() {
+    const token =  tokenInput.value;
+    const repoName = repoNameInput.value;
+})
