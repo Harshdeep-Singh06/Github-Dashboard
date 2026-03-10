@@ -27,7 +27,8 @@ button.addEventListener("click",async function(){
         repoCard.target = "_blank";
 
             repoCard.classList.add(
-                 "bg-white",
+                 "bg-sky-700",
+                 "text-white",
                  "w-60",
                  "p-4",
                  "rounded-2xl",
