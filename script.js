@@ -78,6 +78,12 @@ createRepoBtn.addEventListener('click',async function() {
             private: false
         })
     })
+    const data = await response.json();
+    if(response.ok){
+        repoMsg.textContent = "Repositiory created successfully!";
+    }else{
+        repoMsg.textContent = data.message;
+    }
     
 
 })
