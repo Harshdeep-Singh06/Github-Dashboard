@@ -43,10 +43,9 @@ button.addEventListener("click",async function(){
                  "transition"
             );
         repoCard.textContent = repo.name;
-        repoList.appendChild(repoCard);
-        repoCard.textContent = data.name;
-        repoList.prepend(repoCard);
+        repoList.append(repoCard);
     });
+    
 
     followers.textContent = data.followers;
     following.textContent = data.following;
@@ -84,7 +83,7 @@ createRepoBtn.addEventListener('click',async function() {
     })
     const data = await response.json();
     if(response.ok){
-        repoMsg.textContent = "Repositiory created successfully!";
+        repoMsg.textContent = "Repository created successfully!";
         tokenInput.value = "";
         repoNameInput.value = "";
     }else{
