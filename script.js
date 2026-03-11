@@ -18,8 +18,18 @@ button.addEventListener("click",async function(){
     const response = await fetch(`https://api.github.com/users/${username}`);
     const data = await response.json();
 
+    if(!response.ok){
+        alert(data.message);
+        return;
+    }
+
     const repoResponse = await fetch(`https://api.github.com/users/${username}/repos`);
     const repoData = await repoResponse.json();
+
+    if(!repoResponse.ok){
+        alert(repoResponse.message);
+        return;
+    }
     // console.log(repoData);
     repoList.innerHTML = "";
 
@@ -109,7 +119,7 @@ createRepoBtn.addEventListener('click',async function() {
     repoCard.textContent = data.name;
 
     repoList.prepend(repoCard);
-    repos.textContent = number(repos.Content)+1;
+   repos.textContent = parseInt(repos.textContent || 0) + 1;
 
 }else{
 
