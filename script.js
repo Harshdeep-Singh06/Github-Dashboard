@@ -109,6 +109,7 @@ createRepoBtn.addEventListener('click',async function() {
     repoCard.textContent = data.name;
 
     repoList.prepend(repoCard);
+    repos.textContent = number(repos.Content)+1;
 
 }else{
 
