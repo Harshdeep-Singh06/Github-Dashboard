@@ -44,6 +44,8 @@ button.addEventListener("click",async function(){
             );
         repoCard.textContent = repo.name;
         repoList.appendChild(repoCard);
+        repoCard.textContent = data.name;
+        repoList.prepend(repoCard);
     });
 
     followers.textContent = data.followers;
