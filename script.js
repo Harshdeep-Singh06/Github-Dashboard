@@ -45,7 +45,7 @@ button.addEventListener("click",async function(){
         repoCard.textContent = repo.name;
         repoList.append(repoCard);
     });
-    
+
 
     followers.textContent = data.followers;
     following.textContent = data.following;
@@ -83,12 +83,37 @@ createRepoBtn.addEventListener('click',async function() {
     })
     const data = await response.json();
     if(response.ok){
-        repoMsg.textContent = "Repository created successfully!";
-        tokenInput.value = "";
-        repoNameInput.value = "";
-    }else{
-        repoMsg.textContent = data.message;
-    }
-    
+
+    repoMsg.textContent = "Repository created successfully!";
+    tokenInput.value = "";
+    repoNameInput.value = "";
+
+    const repoCard = document.createElement("a");
+
+    repoCard.href = data.html_url;
+    repoCard.target = "_blank";
+
+    repoCard.classList.add(
+        "bg-sky-500",
+        "text-white",
+        "px-6",
+        "py-4",
+        "rounded-2xl",
+        "shadow-lg",
+        "cursor-pointer",
+        "text-center",
+        "hover:scale-105",
+        "transition"
+    );
+
+    repoCard.textContent = data.name;
+
+    repoList.prepend(repoCard);
+
+}else{
+
+    repoMsg.textContent = data.message;
+
+}
 
 })
