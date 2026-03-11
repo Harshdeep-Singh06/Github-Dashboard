@@ -11,7 +11,7 @@
     min-h-screen">
 
 <div class="w-full flex justify-center pt-10">
-    <div class="flex bg-[#37BACC] rounded-3xl shadow-2xl overflow-hidden focus-within:translate-y-4 focus-within:scale-105 transition">
+    <div class="flex bg-[#37BACC]  rounded-3xl  shadow-2xl overflow-hidden focus-within:translate-y-4 focus-within:scale-105 transition-all ease-in">
          <input 
             type="text"
             placeholder="search username..."
@@ -19,12 +19,12 @@
         <button class=" rounded-3xl text-white px-6 hover:bg-[#4FC6DA]">
             <i class="fas fa-search"></i>
         </button>
-        <p id = "repoMsg" class = "text-sm text-center" ></p>
+       
     </div>
 </div>
 
 <section id= "aboutSec" class = "flex justify-center mt-24 px-4">
-  <div class = "background-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl shadow-xl max-w-xl">
+  <div class = "backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl shadow-xl max-w-xl">
     <h2 class="text-2xl font-bold mb-4 texxt-center">
       How It Works
     </h2>
@@ -82,8 +82,9 @@ Technologies Used
     <input id= "repoNameInput" type = "text" placeholder = "Repository Name"
     class = "px-4 py-2 rounded-lg outline-none">
 
-    <button id = "createRepobtn" class="bg-[#2FA4B5] text-white py-2 rounded-lg hover:bg-[#2B8FA0]">Generate</button>
+    <button id = "createRepoBtn" class="bg-[#2FA4B5] text-white py-2 rounded-lg hover:bg-[#2B8FA0]">Generate</button>
 
+     <p id = "repoMsg" class = "text-sm text-center" ></p>
   </div>
 </section>
 

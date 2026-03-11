@@ -43,7 +43,7 @@ button.addEventListener("click",async function(){
                  "transition"
             );
         repoCard.textContent = repo.name;
-        repoList.appendChild(repoCard)
+        repoList.appendChild(repoCard);
     });
 
     followers.textContent = data.followers;
@@ -63,7 +63,21 @@ createRepoBtn.addEventListener('click',async function() {
     const repoName = repoNameInput.value;
 
     if(token === "" || repoName === ""){
-        alert("Enter Token and Repository name");
+        repoMsg.textContent = "Enter Token and Repository name";
         return;
     }
+
+    const response = await fetch("https://api.github.com/user/repos",{
+        method: "POST",
+        headers:{
+            "Authorization": `token ${token}`,
+            "Content-Type": "application/json"
+        },
+        body:JSON.stringify({
+            name: repoName,
+            private: false
+        })
+    })
+    
+
 })
