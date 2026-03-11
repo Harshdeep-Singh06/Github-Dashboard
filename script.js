@@ -67,6 +67,8 @@ createRepoBtn.addEventListener('click',async function() {
         return;
     }
 
+    repoMsg.textContent = "Creating repository..";
+
     const response = await fetch("https://api.github.com/user/repos",{
         method: "POST",
         headers:{
