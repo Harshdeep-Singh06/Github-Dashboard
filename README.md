@@ -31,3 +31,6 @@ A simple **JavaScript web app** that fetches GitHub user information and reposit
 ## Author
 
 JavaScript practice project using GitHub API.
+
+
+![Project Screenshot](images/ss.png)
